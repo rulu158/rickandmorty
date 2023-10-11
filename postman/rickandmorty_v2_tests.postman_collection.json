@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "13b86580-9228-4c42-8e03-2c428f440b8f",
-		"name": "Rickandmorty v2 Tests",
+		"_postman_id": "4eb6800b-b096-4cf3-9463-b726a6c65365",
+		"name": "rickandmorty_v2_tests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30303580"
 	},
@@ -29,7 +29,7 @@
 							"",
 							"pm.test(\"First episode of original Rick is 'Pilot'\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData[0].episodes[0].name).to.eql(\"Pilot\");",
+							"    pm.expect(jsonData[0].episodes[0]).to.eql(\"Pilot\");",
 							"});",
 							"",
 							"pm.test(\"First appearance of original Rick is 'December 2, 2013'\", function () {",
@@ -45,14 +45,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:9950/api/v1/search-character-appearance?name=Rick Sanchez",
+					"raw": "localhost:9960/api/v2/search-character-appearance?name=Rick Sanchez",
 					"host": [
 						"localhost"
 					],
-					"port": "9950",
+					"port": "9960",
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"search-character-appearance"
 					],
 					"query": [
@@ -99,14 +99,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:9950/api/v1/search-character-appearance?name=Super Turkey",
+					"raw": "localhost:9960/api/v2/search-character-appearance?name=Super Turkey",
 					"host": [
 						"localhost"
 					],
-					"port": "9950",
+					"port": "9960",
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"search-character-appearance"
 					],
 					"query": [
@@ -143,14 +143,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:9950/api/v1/search-character-appearance?name=This Character Does Not Exists Yet",
+					"raw": "localhost:9960/api/v2/search-character-appearance?name=This Character Does Not Exists Yet",
 					"host": [
 						"localhost"
 					],
-					"port": "9950",
+					"port": "9960",
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"search-character-appearance"
 					],
 					"query": [
