@@ -1,13 +1,13 @@
-package dev.bracers.rickandmortyv2;
+package dev.bracers.rickandmorty;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Rickandmortyv2Application {
+public class RickandmortyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Rickandmortyv2Application.class, args);
+		SpringApplication.run(RickandmortyApplication.class, args);
 	}
 
 }

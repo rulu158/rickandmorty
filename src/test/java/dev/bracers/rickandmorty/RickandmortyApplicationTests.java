@@ -1,10 +1,10 @@
-package dev.bracers.rickandmortyv2;
+package dev.bracers.rickandmorty;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Rickandmortyv2ApplicationTests {
+class RickandmortyApplicationTests {
 
 	@Test
 	void contextLoads() {

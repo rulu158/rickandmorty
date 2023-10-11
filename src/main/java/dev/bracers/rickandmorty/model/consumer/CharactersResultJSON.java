@@ -1,4 +1,4 @@
-package dev.bracers.rickandmortyv2.model.consumer;
+package dev.bracers.rickandmorty.model.consumer;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package dev.bracers.rickandmortyv2.service;
+package dev.bracers.rickandmorty.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,22 +9,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import dev.bracers.rickandmortyv2.exception.EpisodesNotFoundException;
-import dev.bracers.rickandmortyv2.model.Episode;
-import dev.bracers.rickandmortyv2.model.consumer.EpisodesResultJSON;
+import dev.bracers.rickandmorty.exception.EpisodesNotFoundException;
+import dev.bracers.rickandmorty.model.Episode;
+import dev.bracers.rickandmorty.model.consumer.EpisodesResultJSON;
 
 @Service
-public class EpisodeService {
+public class EpisodeServiceImpl implements EpisodeService {
 
 	private final RestTemplate restTemplate;
 	
 	private final String episodesBaseAPIEndpoint = "https://rickandmortyapi.com/api/episode/";
 
 	@Autowired
-	public EpisodeService(RestTemplate restTemplate) {
+	public EpisodeServiceImpl(RestTemplate restTemplate) {
 		this.restTemplate = restTemplate;
 	}
 	
+	@Override
 	public List<Episode> getEpisodes(List<String> ids) throws EpisodesNotFoundException {
 		List<Episode> responseEpisodes = new ArrayList<Episode>();
 

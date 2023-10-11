@@ -1,4 +1,4 @@
-package dev.bracers.rickandmortyv2.model.consumer;
+package dev.bracers.rickandmorty.model.consumer;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

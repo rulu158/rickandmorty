@@ -1,4 +1,4 @@
-package dev.bracers.rickandmortyv2.config;
+package dev.bracers.rickandmorty.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

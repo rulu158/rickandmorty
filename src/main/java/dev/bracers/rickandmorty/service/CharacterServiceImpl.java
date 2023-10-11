@@ -1,4 +1,4 @@
-package dev.bracers.rickandmortyv2.service;
+package dev.bracers.rickandmorty.service;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -9,26 +9,27 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import dev.bracers.rickandmortyv2.exception.EpisodesNotFoundException;
-import dev.bracers.rickandmortyv2.model.Character;
-import dev.bracers.rickandmortyv2.model.Episode;
-import dev.bracers.rickandmortyv2.model.consumer.CharactersJSON;
+import dev.bracers.rickandmorty.exception.EpisodesNotFoundException;
+import dev.bracers.rickandmorty.model.Character;
+import dev.bracers.rickandmorty.model.Episode;
+import dev.bracers.rickandmorty.model.consumer.CharactersJSON;
 
 @Service
-public class CharacterService {
+public class CharacterServiceImpl implements CharacterService {
 	
 	private final RestTemplate restTemplate;
 	
-	private final EpisodeService episodeService;
+	private final EpisodeServiceImpl episodeService;
 	
 	private final String charactersBaseAPIEndpoint = "https://rickandmortyapi.com/api/character/?name=";
 
 	@Autowired
-	public CharacterService(RestTemplate restTemplate, EpisodeService episodeService) {
+	public CharacterServiceImpl(RestTemplate restTemplate, EpisodeServiceImpl episodeService) {
 		this.restTemplate = restTemplate;
 		this.episodeService = episodeService;
 	}
 	
+	@Override
 	public List<Character> getCharacter(String name) throws Exception {
 		List<Character> responseCharacters = new ArrayList<Character>();
 

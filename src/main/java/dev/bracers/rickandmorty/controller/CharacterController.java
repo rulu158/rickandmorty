@@ -1,4 +1,4 @@
-package dev.bracers.rickandmortyv2.controller;
+package dev.bracers.rickandmorty.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import dev.bracers.rickandmortyv2.model.Character;
-import dev.bracers.rickandmortyv2.service.CharacterService;
+import dev.bracers.rickandmorty.model.Character;
+import dev.bracers.rickandmorty.service.CharacterServiceImpl;
 
 @RestController
 @RequestMapping(path = "api/v2/search-character-appearance", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class CharacterController {
 	
-	private final CharacterService characterService;
+	private final CharacterServiceImpl characterService;
 	
 	@Autowired
-	public CharacterController(CharacterService characterService) {
+	public CharacterController(CharacterServiceImpl characterService) {
 		this.characterService = characterService;
 	}
 	
