@@ -19,12 +19,12 @@ public class CharacterServiceImpl implements CharacterService {
 	
 	private final RestTemplate restTemplate;
 	
-	private final EpisodeServiceImpl episodeService;
+	private final EpisodeService episodeService;
 	
 	private final String charactersBaseAPIEndpoint = "https://rickandmortyapi.com/api/character/?name=";
 
 	@Autowired
-	public CharacterServiceImpl(RestTemplate restTemplate, EpisodeServiceImpl episodeService) {
+	public CharacterServiceImpl(RestTemplate restTemplate, EpisodeService episodeService) {
 		this.restTemplate = restTemplate;
 		this.episodeService = episodeService;
 	}
