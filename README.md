@@ -89,8 +89,8 @@ You can find the **Dockerfile** for building an image of the application in this
 You can run the image at port 9960 as follows:
 
 ```
-docker pull rulu158/rickandmorty:2.0.0
-docker run -p 9960:9960 rulu158/rickandmorty:2.0.0
+docker pull rulu158/rickandmorty:2.1.0
+docker run -p 9960:9960 rulu158/rickandmorty:2.1.0
 ```
 
 ## API Documentation
