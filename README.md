@@ -16,7 +16,8 @@ As the universe of Rick and Morty looks more of a multiverse, multiple character
 │   │       └── bracers
 │   │           └── rickandmorty
 │   │               ├── config
-│   │               │   └── ConsumerConfiguration.java
+│   │               │   ├── ConsumerConfiguration.java
+│   │               │   └── WebConfig.java
 │   │               ├── controller
 │   │               │   └── CharacterController.java
 │   │               ├── exception
@@ -48,6 +49,7 @@ As the universe of Rick and Morty looks more of a multiverse, multiple character
                     └── service
                         ├── CharacterServiceTest.java
                         └── EpisodeServiceTest.java
+
 ```
 
 The package structure is a common MVC one. We have packages for configurations (**config**), controllers (**controller**), exceptions (**exception**), models (**model**) and services (**service**), and the main application class alone (**RickandmortyApplication.java**).
