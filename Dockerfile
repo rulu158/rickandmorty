@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jdk-focal
-ADD target/rickandmortyv2-2.0.0.jar rickandmortyv2-2.0.0.jar
+ADD target/rickandmorty-2.1.0.jar rickandmorty-2.1.0.jar
 EXPOSE 9960
-ENTRYPOINT ["java", "-jar", "rickandmortyv2-2.0.0.jar"]
+ENTRYPOINT ["java", "-jar", "rickandmorty-2.1.0.jar"]
