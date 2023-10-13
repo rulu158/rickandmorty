@@ -1,15 +1,64 @@
-# rickandmortyv2
+# rickandmorty
 Rick and Morty API v2
 
 rickandmory is a wrapper around the rickandmortyapi.com which searchs for a character of the Rick and Morty universe.
 
 In this implementation, a series of calls are made to the original API for every call to our API.
 
-As the universe of Rick and Morty is more like a multiverse, multiple characters can be returned from different universes of existance.
+As the universe of Rick and Morty looks more of a multiverse, multiple characters can be returned from different universes of existance.
+
+## Package Architecture
+
+```
+├── main
+│   ├── java
+│   │   └── dev
+│   │       └── bracers
+│   │           └── rickandmorty
+│   │               ├── config
+│   │               │   └── ConsumerConfiguration.java
+│   │               ├── controller
+│   │               │   └── CharacterController.java
+│   │               ├── exception
+│   │               │   └── EpisodesNotFoundException.java
+│   │               ├── model
+│   │               │   ├── Character.java
+│   │               │   ├── consumer
+│   │               │   │   ├── CharactersInfoJSON.java
+│   │               │   │   ├── CharactersJSON.java
+│   │               │   │   ├── CharactersResultJSON.java
+│   │               │   │   └── EpisodesResultJSON.java
+│   │               │   └── Episode.java
+│   │               ├── RickandmortyApplication.java
+│   │               └── service
+│   │                   ├── CharacterServiceImpl.java
+│   │                   ├── CharacterService.java
+│   │                   ├── EpisodeServiceImpl.java
+│   │                   └── EpisodeService.java
+│   └── resources
+│       ├── application.properties
+│       ├── static
+│       └── templates
+└── test
+    └── java
+        └── dev
+            └── bracers
+                └── rickandmorty
+                    ├── RickandmortyApplicationTests.java
+                    └── service
+                        ├── CharacterServiceTest.java
+                        └── EpisodeServiceTest.java
+```
+
+The package structure is a common MVC one. We have packages for configurations (**config**), controllers (**controller**), exceptions (**exception**), models (**model**) and services (**service**), and the main application class alone (**RickandmortyApplication.java**).
+
+We also a test package (**service**) to test episodes and characters services (**CharacterServiceTest.java** and **EpisodeServiceTest.java**).
 
 ## How Application works
 
-The application runs at port 9960 by default.
+The application runs at port **9960** by default.
+
+For every call to the API, the character and episode services are used to retrieve the requested information (name of the character, name of the episodes in which the character appears, and first appearance of the character in the series).
 
 Notice that the first_appearance field returned is based on the date of the first Episode for the Character we are querying.
 
