@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.bracers.rickandmorty.model.Character;
-import dev.bracers.rickandmorty.service.CharacterServiceImpl;
+import dev.bracers.rickandmorty.service.CharacterService;
 
 @RestController
 @RequestMapping(path = "api/v2/search-character-appearance", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class CharacterController {
 	
-	private final CharacterServiceImpl characterService;
+	private final CharacterService characterService;
 	
 	@Autowired
-	public CharacterController(CharacterServiceImpl characterService) {
+	public CharacterController(CharacterService characterService) {
 		this.characterService = characterService;
 	}
 	
